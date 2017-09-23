@@ -1,0 +1,52 @@
+*******************************************
+*** THE ULTIMATE SUBREDDIT LINK SCRAPER ***
+*******************************************
+
+The name is meant to be ironic. This is a very simple and easy to use link
+scraper for reddit.
+
+INSTALLATION:
+
+For this to work, you need to set up an "application" on your reddit account
+that will allow the link scraper to connect to Reddit. This is a very simple
+process:
+
+1. Go to your reddit preferences page
+2. Click the apps tab
+3. Click "are you a developer? create an app..."
+4. Enter any name
+5. Select the "script" button
+6. In the "redirect uri" field, enter any url. http://www.google.com/ works.
+
+Your reddit is now set up. Now, go to the folder you downloaded this in and
+rename "account.py.sample" to "account.py"
+
+Finally, fill out the information in account.py with your reddit username and
+password, as well as the "client id", which is the long code under the name of
+your reddit app, and the "secret" which is listed in your app next to the word
+"secret".
+
+Now, just make sure you have the python3 packages tkinter and praw installed.
+Simply run gui.pyw either from the command line or by double-clicking. The
+interface is fairly self explanatory, but here's a quick rundown:
+
+Under "Subreddit" enter the name of the subreddit you want to scrape from.
+
+For the "Category" drop-down, select the category you want to scrape. These
+are equivalent to the sorting methods on each subreddit.
+
+Under "Limit" select how many posts you want to churn through.
+
+Under "Submission Title Regex" you can enter a regular expression that will
+match to the titles of posts and only download the ones that match. Leaving it
+blank downloads all posts it comes across.
+
+Under "File Type Regex" you can enter a regular expression that will operate
+on the file type. Essentially, you just create a group of possible file types
+that you want to download. For example, '(png|jpg|jpeg)' will download most
+images. Leaving this blank will download nothing, if you want to download
+everything enter '*'.
+
+The DOWN option will download every matching link to a folder named after the
+subreddit, and the LINK option will store the titles and links in a text file
+named after the subreddit.

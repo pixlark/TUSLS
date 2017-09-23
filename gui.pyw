@@ -116,7 +116,6 @@ def wait_for_thread_completion(wthread):
 	if not wthread.isAlive():
 		root.title('The Ultimate Subreddit Link Scraper')
 		return
-	print('waiting...')
 	root.after(1000, wait_for_thread_completion, wthread)
 
 def button_scrape_pressed():
